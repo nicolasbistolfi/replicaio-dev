@@ -1,0 +1,15 @@
+version: "3.1"
+services:
+  replica:
+    image: "replica/replica:latest"
+    user: "node"
+    working_dir: /home/node/app
+    ports:
+      - 5500:5500
+    networks:
+      - web
+    command: "npm start"
+volumes:
+  www:
+networks:
+  web:

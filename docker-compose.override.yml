@@ -1,0 +1,8 @@
+version: '3.1'
+services:
+  replica:
+    environment:
+      NODE_DEBUG: replica
+    volumes:
+      - ./:/home/node/app
+    command: "npm run dev"

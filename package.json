@@ -1,0 +1,68 @@
+{
+  "name": "replica",
+  "version": "1.0.0",
+  "description": "Replica",
+  "main": "lambda.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/replicaio/replica.git"
+  },
+  "author": "Nicolás Bistolfi",
+  "license": "ISC",
+  "homepage": "https://github.com/replicaio/replica#readme",
+  "engines": {
+    "node": ">=12.0.0",
+    "npm": ">=6.0.0"
+  },
+  "dependencies": {
+    "@sentry/node": "^5.4.3",
+    "async": "^3.2.0",
+    "aws-sdk": "^2.588.0",
+    "aws-serverless-express": "^3.3.8",
+    "brotli": "^1.3.2",
+    "cheerio": "^1.0.0-rc.3",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "html-minifier": "^4.0.0",
+    "http-proxy": "^1.17.0",
+    "jsdom": "^16.4.0",
+    "md5": "^2.2.1",
+    "node-dev": "^3.1.3",
+    "npm": "^6.4.0",
+    "path": "^0.12.7",
+    "spdy": "^4.0.2",
+    "uglify-js": "^3.10.1",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "claudia": "^5.12.0",
+    "clean-css": "^4.2.3",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "istanbul": "^0.4.5",
+    "jest": "^24.8.0",
+    "nock": "^10.0.6",
+    "ntl": "^5.1.0",
+    "supertest": "^4.0.2"
+  },
+  "files": [
+    "LICENSE",
+    "History.md",
+    "Readme.md",
+    "index.js",
+    "lib/"
+  ],
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "ntl",
+    "lint": "eslint .",
+    "test": "mocha --require test/support/env --reporter spec --bail --check-leaks test/ test/acceptance/",
+    "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --require test/support/env --reporter spec --check-leaks test/ test/acceptance/",
+    "deploy": "claudia create --handler lambda.handler  --memory 512 --timeout 60 --deploy-proxy-api --version dev --region us-east-1",
+    "release": "claudia set-version --version production",
+    "update": "claudia update --memory 512 --timeout 60",
+    "generate-proxy": "claudia generate-serverless-express-proxy --express-module app"
+  }
+}
