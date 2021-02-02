@@ -9,12 +9,12 @@ Accelerate, route, mutate & securely deliver every request with [node](http://no
   [![Test Coverage][coveralls-image]][coveralls-url]
 
 ```js
-const replica = require('replica')
-const app = replica()
-
-app.get('/', function (req, res) {
-  res.send('Hello World')
-})
+const replica = require('replica');
+const app = replica({
+    host : 'google.com',
+    port : 443,
+    protocol: 'https:'
+});
 
 app.listen(3000)
 ```
