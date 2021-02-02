@@ -1,6 +1,6 @@
 [![Replica Logo](https://via.placeholder.com/350x150)](http://replicajs.com/)
 
-  Fast, unopinionated, minimalist web framework for [node](http://nodejs.org).
+Accelerate, route, mutate & securely deliver every request with [node](http://nodejs.org).
 
   [![NPM Version][npm-image]][npm-url]
   [![NPM Downloads][downloads-image]][downloads-url]
@@ -43,15 +43,15 @@ for more information.
 ## Features
 
   * Replicate static or dynamics websites
-  * Highly performance
-  * Deliver your website even when your server is down
-  * Executable for replicating applications quickly
+  * Improve caching and assets delivery
+  * Increase service availability
+  * Use as a modern facade for legacy servers
 
 ## Docs & Community
 
-  * [Website and Documentation](http://replicajs.com/) - [[website repo](https://github.com/replica/replicajs.com)]
-  * [GitHub Organization](https://github.com/replica) for Official Middleware & Modules
-  * Visit the [Wiki](https://github.com/replica/replicajs/wiki)
+  * [Website and Documentation](http://replicajs.com/) - [[website repo](https://github.com/replicaio/replicaio)]
+  * [GitHub Organization](https://github.com/replicaio) for Official Middleware & Modules
+  * Visit the [Wiki](https://github.com/replicaio/replicaio/wiki)
 
 ### Security Issues
 
@@ -59,33 +59,6 @@ If you discover a security vulnerability in Replica, please see [Security Polici
 
 ## Quick Start
 
-  The quickest way to get started with replica is to utilize the executable [`replica(1)`](https://github.com/replicajs/generator) to generate an application as shown below:
-
-  Install the executable. The executable's major version will match Replica's:
-
-```bash
-$ npm install -g replica-generator@4
-```
-
-  Create the app:
-
-```bash
-$ replica /tmp/foo && cd /tmp/foo
-```
-
-  Install dependencies:
-
-```bash
-$ npm install
-```
-
-  Start the server:
-
-```bash
-$ npm start
-```
-
-  View the website at: http://localhost:3000
 
 ## Philosophy
 
@@ -93,19 +66,6 @@ $ npm start
 
 ## Examples
 
-  To view the examples, clone the Replica repo and install the dependencies:
-
-```bash
-$ git clone git://github.com/replicajs/replica.git --depth 1
-$ cd replica
-$ npm install
-```
-
-  Then run whichever example you want:
-
-```bash
-$ node examples/content-negotiation
-```
 
 ## Tests
 
@@ -124,7 +84,7 @@ $ npm test
 
 The author of Replica is [Nico Bistolfi](https://github.com/nicolasbistolfi)
 
-[List of all contributors](https://github.com/replicajs/replica/graphs/contributors)
+[List of all contributors](https://github.com/replicaio/replicaio/graphs/contributors)
 
 ## License
 
