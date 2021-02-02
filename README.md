@@ -1,4 +1,4 @@
-[![Replica Logo](https://i.cloudup.com/zfY6lL7eFa-3000x3000.png)](http://replicajs.com/)
+[![Replica Logo](https://via.placeholder.com/350x150)](http://replicajs.com/)
 
   Fast, unopinionated, minimalist web framework for [node](http://nodejs.org).
 
